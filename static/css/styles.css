@@ -6,28 +6,107 @@ a {
   color: inherit;
 }
 
-body {
-  min-height: 100vh;
-}
 header {
-  height: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 36px;
-  font-weight: bold;
-  background-color: yellow;
-}
-main {
-  height: 60vh;
-  background-color: yellowgreen;
-}
-footer {
   height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 36px;
+  color: #e30915;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+footer {
+  user-select: none;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
-  background-color: green;
+  color: white;
+}
+
+/* 
+NetflixBgColor: #141414;
+NetflicFontColor: #e30915;
+*/
+
+/* ================================ Header ================================ */
+
+.team-name {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* ================================ Main ================================ */
+
+#detail-main {
+  width: 40%;
+  min-width: 630px;
+  min-height: 60vh;
+  color: white;
+  margin: 0 auto;
+}
+
+.detail-top {
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 4px;
+  border-bottom: 1.8px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-middle {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 20px;
+  padding: 20px 0px;
+  margin-bottom: 28px;
+  border-bottom: 1.8px solid rgba(255, 255, 255, 0.2);
+}
+.detail-profile-img {
+  border-radius: 3%;
+}
+.detail-profile-info {
+  font-size: 20px;
+}
+
+.detail-bottom {
+  display: flex;
+  align-items: center;
+}
+.detail-btns > button {
+  padding: 8px 22px;
+}
+.detail-btns > button:nth-child(1) {
+  background-color: white;
+}
+.detail-btns > button:nth-child(1):hover {
+  color: white;
+  background-color: #e30915;
+}
+.detail-btns > button:nth-child(2) {
+  color: rgba(255, 255, 255, 0.4);
+  background-color: #141414;
+  border: 1.8px solid rgba(255, 255, 255, 0.4);
+  margin-left: 8px;
+}
+.detail-btns > button:nth-child(2):hover {
+  color: white;
+  border-color: white;
+}
+
+/* ================================ Footer ================================ */
+
+.fa-brands {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 1px;
+}
+.member-name {
+  margin-top: 16px;
 }

@@ -11,6 +11,10 @@ DB_URL = ""
 def home():
     return render_template('index.html')
 
+@app.route("/profile-detail")
+def posting():
+    return render_template('detail.html')
+
 # ============================= 전체 프로필 조회 =============================
 
 # ============================= 프로필 상세보기 =============================
