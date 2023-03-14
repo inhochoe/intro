@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+header {
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: yellow;
+}
+main {
+  height: 60vh;
+  background-color: yellowgreen;
+}
+footer {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: green;
+}
