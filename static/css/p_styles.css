@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+header {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: #141414;
+  color: #e30915;
+}
+main {
+  height: 70vh;
+
+}
+footer {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: green;
+}
+
+.main-form{
+  width: 70%;
+  height: 60vh;
+  margin: 0 auto
+}
+
+.btn-lg{
+  --bs-btn-active-bg: #e30915; 
+  --bs-btn-active-border-color:#e30915;
+}
+
+.btn-save{
+  --bs-btn-color: white;
+  --bs-btn-bg: #e30915;
+  --bs-btn-border-color: #e30915;
+  --bs-btn-active-border-color:#e30915;
+  --bs-btn-active-bg: #e30915; 
+}
