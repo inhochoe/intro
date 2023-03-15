@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'TheJamsil5Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'TheJamsil5Bold';
+}
+header {
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: yellow;
+}
+main {
+  height: 60vh;
+  background-color: yellowgreen;
+}
+footer {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: green;
+}
+
+.list-profiles .profile-gate-label {
+    color: #fff;
+    font-size: 3.5vw;
+    font-weight: unset;
+    width: 100%;
+    margin-bottom: 1vw;
+}
+
+.list-profiles .choose-profile, .list-profiles .profile-gate-label {
+    opacity: 1;
+    transition: opacity .4s ease-out;
+}
+
+.profiles-gate-container {
+  background: #141414;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 0;
+}
+
+.profile-button {
+  background-color: transparent;
+  border: 1px solid grey;
+  color: grey;
+  cursor: pointer;
+  display: block;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  margin: 2em 0 1em;
+  padding: 0.5em 1.5em;
+}
+
+.profiles-gate-container li a {
+  text-decoration: none;
+}
+
+.profiles-gate-container .centered-div {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.list-profiles {
+    max-width: 80%;
+}
+
+/* .netflix-sans-font-loaded {
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+} */
+
+.list-profiles .avatar-wrapper {
+    position: relative;
+}
+
+.profiles-gate-container li.profile:not(:last-child) {
+    margin: 0 2vw 0 0;
+}
+.profiles-gate-container li.profile {
+    max-width: 200px;
+    min-width: 84px;
+    width: 10vw;
+}
+
+.profiles-gate-container li {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.profiles-gate-container .profile-icon {
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    position: relative;
+    text-decoration: none;
+    width: 10vw;
+}
+
+.extended-diacritics-language .profiles-gate-container .profile-name {
+    line-height: 1.5;
+}
+
+.profiles-gate-container .profile-name {
+    color: grey;
+    display: block;
+    font-size: 1.3vw;
+    line-height: 1.2em;
+    margin: 0.6em 0;
+    min-height: 1.8em;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    margin-top: 1vw;
+}
+
+.extended-diacritics-language .profiles-gate-container .profile-name {
+    line-height: 1.5;
+}
+
+
+.profiles-gate-container .addProfileIcon {
+    align-items: center;
+    color: grey;
+    display: flex;
+    font-size: 5vw;
+    height: 10vw;
+    justify-content: center;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    text-align: center;
+    text-decoration: none;
+    width: 10vw;
+}
+
+[class*=" icon-"], [class^=icon-] {
+    font-family: nf-icon;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+    transform: translateZ(0);
+}
+
+.profiles-gate-container li a.focused .addProfileIcon, .profiles-gate-container li a:focus .addProfileIcon, .profiles-gate-container li a:hover .addProfileIcon {
+  background-color: #e5e5e5;
+  border-radius: 4px;
+}
