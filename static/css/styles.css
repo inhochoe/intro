@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e30915;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+footer {
+  user-select: none;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+}
+
+/* 
+NetflixBgColor: #141414;
+NetflicFontColor: #e30915;
+*/
+
+/* ================================ Header ================================ */
+
+.team-name {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.team-name:hover {
+  color: #e30915;
+}
+
+/* ================================ Main ================================ */
+
+#detail-main {
+  width: 40%;
+  min-width: 630px;
+  min-height: 60vh;
+  color: white;
+  margin: 0 auto;
+}
+
+.detail-top {
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 4px;
+  border-bottom: 1.8px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-middle {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 20px;
+  padding: 20px 0px;
+  margin-bottom: 28px;
+  border-bottom: 1.8px solid rgba(255, 255, 255, 0.2);
+}
+.detail-profile-img {
+  border-radius: 3%;
+}
+.detail-profile-info {
+  font-size: 20px;
+}
+
+.detail-bottom {
+  display: flex;
+  align-items: center;
+}
+.detail-btns > button {
+  padding: 8px 22px;
+}
+.detail-btns > button:nth-child(1) {
+  background-color: white;
+}
+.detail-btns > button:nth-child(1):hover {
+  color: white;
+  background-color: #e30915;
+}
+.detail-btns > button:nth-child(2) {
+  color: rgba(255, 255, 255, 0.4);
+  background-color: #141414;
+  border: 1.8px solid rgba(255, 255, 255, 0.4);
+  margin-left: 8px;
+}
+.detail-btns > button:nth-child(2):hover {
+  color: white;
+  border-color: white;
+}
+
+/* ================================ Footer ================================ */
+
+.fa-brands {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 1px;
+}
+.member-name {
+  margin-top: 16px;
+}
+
+/* ================================  for posting.html ================================ */
+
+.main-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.btn-lg {
+  --bs-btn-active-bg: #e30915;
+  --bs-btn-active-border-color: #e30915;
+}
+
+.btn-save {
+  --bs-btn-color: white;
+  --bs-btn-bg: #e30915;
+  --bs-btn-border-color: #e30915;
+  --bs-btn-active-border-color: #e30915;
+  --bs-btn-active-bg: #e30915;
+}
+
+/* ================================  for index.html ================================ */
+
+.list-profiles .profile-gate-label {
+  color: #fff;
+  font-size: 3.5vw;
+  font-weight: unset;
+  width: 100%;
+  margin-bottom: 1vw;
+}
+
+.list-profiles .choose-profile,
+.list-profiles .profile-gate-label {
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+.profiles-gate-container {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 0;
+}
+
+.profile-button {
+  background-color: transparent;
+  border: 1px solid grey;
+  color: grey;
+  cursor: pointer;
+  display: block;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  margin: 2em 0 1em;
+  padding: 0.5em 1.5em;
+}
+
+.profiles-gate-container .centered-div {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.list-profiles {
+  max-width: 80%;
+}
+
+.list-profiles .avatar-wrapper {
+  position: relative;
+}
+
+.profiles-gate-container li.profile:not(:last-child) {
+  margin: 0 2vw 0 0;
+}
+.profiles-gate-container li.profile {
+  max-width: 200px;
+  min-width: 84px;
+  width: 10vw;
+}
+
+.profiles-gate-container li {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.profiles-gate-container .profile-icon {
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 10vw;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 84px;
+  min-width: 84px;
+  position: relative;
+  text-decoration: none;
+  width: 10vw;
+}
+
+.extended-diacritics-language .profiles-gate-container .profile-name {
+  line-height: 1.5;
+}
+
+.profiles-gate-container .profile-name {
+  color: grey;
+  display: block;
+  font-size: 1.3vw;
+  line-height: 1.2em;
+  margin: 0.6em 0;
+  min-height: 1.8em;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  margin-top: 1vw;
+}
+
+.extended-diacritics-language .profiles-gate-container .profile-name {
+  line-height: 1.5;
+}
+
+.profiles-gate-container .addProfileIcon {
+  align-items: center;
+  color: grey;
+  display: flex;
+  font-size: 5vw;
+  height: 10vw;
+  justify-content: center;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 84px;
+  min-width: 84px;
+  text-align: center;
+  text-decoration: none;
+  width: 10vw;
+}
+
+[class*=" icon-"],
+[class^="icon-"] {
+  font-family: nf-icon;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+  transform: translateZ(0);
+}
