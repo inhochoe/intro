@@ -44,7 +44,7 @@
       <wrapper>
         <!-- Top -->
         <div class="detail-top">
-          <span>{{profile[0]['real_name']}}{{profile[0]['animal']}}</span>
+          <span id="realName">{{profile[0]['real_name']}}</span><span>{{profile[0]['animal']}}</span>
         </div>
         <!-- 강아지를 체크했으면 강아지아이콘, 고양이는 고양이아이콘! -->
 
@@ -58,7 +58,7 @@
               <label for="" class="form-label">닉네임: {{profile[0]['nick_name']}}</label>
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">SNS 주소: {{profile[0]['sns']}}</label>
+              <label for="" class="form-label" href=# >SNS 주소: {{profile[0]['sns']}}</label>
             </div>
             <div class="mb-3">
               <label for="" class="form-label">사용할 줄 아는 언어: {{profile[0]['lang']}} </label>
@@ -78,8 +78,8 @@
         <!-- Bottom -->
         <div class="detail-bottom">
           <div class="detail-btns">
-            <button>수정</button>
-            <button>삭제</button>
+            <!-- <button>수정</button>-->
+            <button onclick="profile_delete()">삭제</button>
           </div>
         </div>
       </wrapper>

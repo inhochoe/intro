@@ -31,10 +31,15 @@ def profile_get():
 
 # ============================= 프로필 삭제 =============================
 
+@app.route("/profile/delete", methods=["POST"])
+def profile_delete():
+    real_name_receive = request.form['real_name_give']
+    print(real_name_receive)
+    db.profiles.delete_one({'real_name':real_name_receive})
+    return jsonify({'msg': '삭제되었습니다!'})
 
-# db.users.delete_one({'name':'bobby'})
-
-
+# real_name으로 가져와서 디테일에 표시해주고 있으니까
+# 삭제도 real_name기준으로 해야 할 듯??
 
 # ============================= 프로필 작성 =============================
 @app.route("/profiles", methods=["POST"])
@@ -51,8 +56,6 @@ def profile_post():
     animal_receive = request.form['animal_give']
     mind_receive = request.form['mind_give']
 
-
-
     doc = {
         'real_name' : real_name_receive,
         'nick_name' : nick_name_receive,
@@ -66,12 +69,8 @@ def profile_post():
         'animal' : animal_receive,
         'mind' : mind_receive
     }
-
-
     db.profiles.insert_one(doc)
-
     return jsonify({'msg': '프로필을 작성했습니다'})
-
     
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5001, debug=True)

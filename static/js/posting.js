@@ -10,15 +10,42 @@ function profile_post() {
   let mind = $("#mind").val();
   let animal ="";
 
-  
-  if($('input[id="dog"]').is(":checked") == true){
+  if(($('input[id="dog"]').is(":checked") === true) && ($('input[id="cat"]').is(":checked") === false)){
     animal = '🐶';
   }
-  if($('input[id="cat"]').is(":checked") == true){
+  if(($('input[id="dog"]').is(":checked") === false) && ($('input[id="cat"]').is(":checked") === true)){
     animal = '🐱';
   }
+  if(($('input[id="dog"]').is(":checked") === true) && ($('input[id="cat"]').is(":checked") === true)){
+    animal = '🐶🐱';
+  }
 
+  // 
+  // if(!realname || !want || !mind ) { return ;} // <= 유효성 검사
+  // if(!img) {
+  //   img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51b10ldicG0uJmY_D1NtBif0RAHmCvMWMbmHn2kjM&s"
+  // } // <= 이미지 undefined면 대체 이미지 삽입
 
+  // let formData = new FormData();
+
+  // formData.append("real_name_give", realname);
+  // formData.append("nick_name_give", nickname);
+  // formData.append("img_give", img);
+  // formData.append("sns_give", sns);
+  // formData.append("lang_give", lang);
+  // formData.append("want_give", want);
+  // formData.append("strength_give", strength);
+  // // formData.append("dog_give", dog);
+  // // formData.append("cat_give", cat);
+  // formData.append("animal_give", animal);
+  // formData.append("mind_give", mind);
+
+  // fetch("/profiles", { method: "POST", body: formData })
+  // .then((res) => res.json())
+  // .then((data) => {
+  //   alert(data['msg']);
+  // });
+  //
 
 
   if ((realname !== "") && (want !== "") && (mind !== "")) {
@@ -40,7 +67,7 @@ function profile_post() {
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
-            // alert(data['msg'])
+            alert(data['msg'])
             //window.location.reload();
             // 메인페이지로 이동
             // window.location.reload('index.html');
@@ -64,14 +91,10 @@ function profile_post() {
         fetch("/profiles", { method: "POST", body: formData })
         .then((res) => res.json())
         .then((data) => {
-            console.log(data)
-            // alert(data['msg'])
+            alert(data["msg"]);
             //window.location.reload();
             // 메인페이지로 이동
-            // window.location.reload('index.html');
+            window.location.replace(window.location.origin);
         });
     }
-  }
-}
-
-
+  }}
