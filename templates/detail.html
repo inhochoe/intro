@@ -34,52 +34,43 @@
       src="https://kit.fontawesome.com/405588dbc6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Devsquad</title>
+    <title>뎁플릭스</title>
   </head>
   <body>
     <header>
-      <span class="team-name">Devsquad</span>
+      <a href="{{url_for('home')}}">DEVFLIX <a>
     </header>
     <main id="detail-main">
       <wrapper>
         <!-- Top -->
         <div class="detail-top">
-          <span>{Real Name}</span>
+          <span>{{profile[0]['real_name']}}{{profile[0]['animal']}}</span>
         </div>
+        <!-- 강아지를 체크했으면 강아지아이콘, 고양이는 고양이아이콘! -->
 
         <!-- Middle -->
         <div class="detail-middle">
-          <div>
-            <img
-              class="detail-profile-img"
-              src="https://placehold.co/180x180?text=img"
-              alt="profile image"
-            />
+          <div id="profile-image">
+            <img class="detail-profile-img" src="{{profile[0]['img']}}" alt="profile image"/>
           </div>
           <div class="detail-profile-info">
             <div class="mb-3">
-              <label for="" class="form-label">닉네임 </label>
+              <label for="" class="form-label">닉네임: {{profile[0]['nick_name']}}</label>
             </div>
             <div class="mb-3">
-              <label for="" class="form-label"> SNS 계정 </label>
+              <label for="" class="form-label">SNS 주소: {{profile[0]['sns']}}</label>
             </div>
             <div class="mb-3">
-              <label for="" class="form-label"> 깃허브 주소 </label>
+              <label for="" class="form-label">사용할 줄 아는 언어: {{profile[0]['lang']}} </label>
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">사용할 줄 아는 언어 </label>
+              <label for="" class="form-label">배우고 싶은 언어: {{profile[0]['want']}} </label>
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">배우고 싶은 언어 </label>
+              <label for="" class="form-label">장점: {{profile[0]['strength']}} </label>
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">장점 </label>
-            </div>
-            <div class="mb-3">
-              <label for="" class="form-label">강아지? 고양이? </label>
-            </div>
-            <div class="mb-3">
-              <label for="" class="form-label">{마음가짐} </label>
+              <label for="" class="form-label">마음가짐: {{profile[0]['mind']}}</label>
             </div>
           </div>
         </div>

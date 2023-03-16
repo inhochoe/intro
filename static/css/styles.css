@@ -7,12 +7,20 @@ a {
 }
 
 header {
-  height: 180px;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: #141414;
   color: #e30915;
 }
+
+header :hover {
+  color: #e30915;
+}
+
 
 body {
   min-height: 100vh;
@@ -70,6 +78,9 @@ NetflicFontColor: #e30915;
 }
 .detail-profile-img {
   border-radius: 3%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
 .detail-profile-info {
   font-size: 20px;

@@ -125,6 +125,7 @@ footer {
     background-color: #333;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border: none;
     border-radius: 4px;
     box-sizing: border-box;
@@ -136,6 +137,7 @@ footer {
     position: relative;
     text-decoration: none;
     width: 10vw;
+    /* object-fit: cover; */
 }
 
 .extended-diacritics-language .profiles-gate-container .profile-name {
